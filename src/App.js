@@ -1,11 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-import Login from './components/Login/Login.js';
+// src/App.js
 
-function App() {
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navigation from './components/Navigation/Navigation';
+import Home from './components/widoki/Home';
+import UserAddViev from './components/widoki/UserAddViev';
+import Profile from './components/widoki/Profile';
+
+const App = () => {
   return (
-    <Login></Login>
+    <Router>
+       <div className="App">
+        <header>
+          <Navigation />
+        </header>
+        <main>
+          <Routes>
+            <Route path="/login" element={<Home/>}/>
+            <Route path="/useradd" element={<UserAddViev/>}/>
+            <Route path="/profile" element={<Profile/>}/>
+          </Routes>
+
+        </main>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
