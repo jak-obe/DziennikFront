@@ -1,0 +1,43 @@
+/* src/components/Navigation.css */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    padding: 10px 0;
+    width: 100%;
+    z-index: 1000; /* Wysokość indeksu, aby nawigacja była na wierzchu */
+  }
+  
+  .navbar-center {
+    width: 100%;
+    max-width: 1200px; /* Maksymalna szerokość centrum nawigacji */
+    margin: 0 auto; /* Automatyczne wycentrowanie */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navbar-links li {
+    margin-right: 20px;
+  }
+  
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    background-color: #555;
+  }
+  
