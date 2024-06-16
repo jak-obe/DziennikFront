@@ -3,7 +3,7 @@ import { Navigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import './Navigation.css'; // Import stylów CSS dla nawigacji
 
-const NavigationExtend = () => {
+const NavigationStudent = () => {
     const [unloged, setUnloged] = useState(false);
   const handleLogout = async () => {
     try {
@@ -26,7 +26,7 @@ const NavigationExtend = () => {
 
       console.log('Logged out successfully');
     } catch (error) {
-      console.error('Error logging out:', error.message);
+    //   console.error('Error logging out:', error.message);
       // Obsługa błędu, np. wyświetlenie komunikatu użytkownikowi
     }
   };
@@ -44,7 +44,10 @@ else {
             <Link to="/profile" className="nav-link">Profile</Link>
           </li>
           <li>
-            <Link to="/allusers" className="nav-link">AllUsers</Link>
+            <Link to="/profile" className="nav-link">Plan</Link>
+          </li>
+          <li>
+            <Link to="/profile" className="nav-link">Oceny</Link>
           </li>
           <li>
             <button className="nav-button" onClick={handleLogout}>Logout</button>
@@ -56,4 +59,4 @@ else {
 }
 };
 
-export default NavigationExtend;
+export default NavigationStudent;
