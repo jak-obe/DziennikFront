@@ -6,6 +6,7 @@ import UserAddViev from './components/widoki/UserAddViev';
 import ProfileViev from './components/widoki/ProfileViev';
 import AllUsersViev from './components/widoki/AllUsersViev';
 import PlanLekcji from "./components/PlanLekcji/PlanLekcjiView";
+import NauczycielView from "./components/Nauczyciel/NauczycielView";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/profile" element={<ProfileViev/>} />
           <Route path="/allusers" element={<AllUsersViev/>} />
           <Route path="/planlekcji" element={<PlanLekcji $id={"e734ce49-b965-4f4a-8b0e-da8afcb40939"}/>} />
+          <Route path="/nauczyciel" element={<NauczycielView/>} />
         </Routes>
       </div>
     </Router>

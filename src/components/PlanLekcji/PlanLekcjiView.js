@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './PlanLekcji.css';
-import NavigationExtend from "../Navigation/NavigationExtend";
+import Navigation from "../Navigation/Navigation";
 
 const PlanLekcji = ({
   $id,
@@ -60,7 +60,7 @@ const PlanLekcji = ({
   return (
 
     <div className="plan-lekcji">
-      <NavigationExtend></NavigationExtend>
+      <Navigation></Navigation>
       <h2>Plan Lekcji</h2>
       <div className="week">
         {daysOfWeek.map(day => (
