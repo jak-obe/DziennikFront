@@ -7,7 +7,6 @@ import Navigation from '../Navigation/Navigation';
 const LoginViev = () => {
   return (
     <div>
-      <Navigation></Navigation>
         <Login></Login>
     </div>
   );

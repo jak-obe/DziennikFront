@@ -2,12 +2,12 @@
 
 import React from 'react';
 import UsersId from '../User/UsersId';
-import NavigationExtend from '../Navigation/NavigationExtend';
+import NavigationMenager from '../Navigation/NavigationMenager';
 
 const ProfileViev = () => {
   return (
     <div>
-      <NavigationExtend></NavigationExtend>
+      <NavigationMenager></NavigationMenager>
         <UsersId></UsersId>
     </div>
   );

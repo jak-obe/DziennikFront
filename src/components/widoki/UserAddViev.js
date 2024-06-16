@@ -2,12 +2,12 @@
 
 import React from 'react';
 import UserAdd from '../User/UserAdd';
-import Navigation from '../Navigation/Navigation';
+import NavigationAdmin from '../Navigation/NavigationAdmin';
 
 const UserAddViev= () => {
   return (
     <div>
-        <Navigation></Navigation>
+        <NavigationAdmin></NavigationAdmin>
         <UserAdd></UserAdd>
     </div>
   );
