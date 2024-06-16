@@ -55,6 +55,7 @@ else {
           <li>
             <button className="nav-button" onClick={handleLogout}>Logout</button>
           </li>
+
         </ul>
       </div>
     </nav>

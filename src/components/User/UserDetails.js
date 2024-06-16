@@ -42,8 +42,7 @@ const UserDetails = ({
           <p><strong>Id long:</strong> {id}</p>
           <p><strong>Email:</strong> {email}</p>
         </div>
-      </div>
-    </li>
+      </div>    </li>
   );
 };
 
