@@ -15,6 +15,7 @@ const App = () => {
           <Route path="/useradd" element={<UserAddViev/>} />
           <Route path="/profile" element={<ProfileViev/>} />
           <Route path="/allusers" element={<AllUsersViev/>} />
+          <Route path="" element={<LoginViev/>} />
         </Routes>
       </div>
     </Router>
