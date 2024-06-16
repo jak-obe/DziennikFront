@@ -2,13 +2,15 @@
 
 import React from 'react';
 import Login from '../Login/Login';
+import Navigation from '../Navigation/Navigation';
 
-const Home = () => {
+const LoginViev = () => {
   return (
     <div>
+      <Navigation></Navigation>
         <Login></Login>
     </div>
   );
 };
 
-export default Home;
+export default LoginViev;

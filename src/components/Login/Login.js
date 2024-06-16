@@ -1,11 +1,14 @@
 // src/components/Login.js
 import React, { useState } from 'react';
+import { Navigate } from 'react-router-dom';
 import './Login.css';
+import App from '../../App';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
+  const [loged, setLoged] = useState(false);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -21,12 +24,21 @@ const Login = () => {
     const data = await response.json();
 
     if (response.ok) {
-      console.log('Login successful!', data);
+      setLoged(true);
+      console.log('Login successful!');
+      // console.log(data);
       // Handle the response data here (e.g., save token, redirect user)
     } else {
-      console.log('Login failed:', data.message);
+      setLoged(false);
+      console.log('Login failed:');
+      // console.log(data.message);
     }
   };
+
+  if (loged) {
+    return <Navigate replace to="/profile" />;
+  } 
+else {
 
   return (
     <div className="login-container">
@@ -64,6 +76,7 @@ const Login = () => {
       </form>
     </div>
   );
-};
+}}
+;
 
 export default Login;

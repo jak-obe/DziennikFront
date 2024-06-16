@@ -1,27 +1,21 @@
-// src/App.js
-
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navigation from './components/Navigation/Navigation';
-import Home from './components/widoki/Home';
+import { Navigate } from 'react-router-dom';
+import LoginViev from './components/widoki/LoginViev';
 import UserAddViev from './components/widoki/UserAddViev';
-import Profile from './components/widoki/Profile';
+import ProfileViev from './components/widoki/ProfileViev';
+import AllUsersViev from './components/widoki/AllUsersViev';
 
 const App = () => {
   return (
     <Router>
-       <div className="App">
-        <header>
-          <Navigation />
-        </header>
-        <main>
-          <Routes>
-            <Route path="/login" element={<Home/>}/>
-            <Route path="/useradd" element={<UserAddViev/>}/>
-            <Route path="/profile" element={<Profile/>}/>
-          </Routes>
-
-        </main>
+      <div>
+        <Routes>
+          <Route path="/login" element={<LoginViev/>} />
+          <Route path="/useradd" element={<UserAddViev/>} />
+          <Route path="/profile" element={<ProfileViev/>} />
+          <Route path="/allusers" element={<AllUsersViev/>} />
+        </Routes>
       </div>
     </Router>
   );

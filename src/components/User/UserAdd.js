@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './UserAdd.css'; // Załóżmy, że istnieje plik UserAdd.css dla stylizacji
+import NavigationExtend from '../Navigation/NavigationExtend';
 
 const UserAdd = () => {
   const [firstName, setFirstName] = useState('');
@@ -88,7 +89,8 @@ const UserAdd = () => {
             onChange={(e) => setRole(e.target.value)}
             required
           >
-            <option value="User">User</option>
+            <option value="Teacher">Teacher</option>
+            <option value="Student">Student</option>
             <option value="Administrator">Administrator</option>
           </select>
         </div>

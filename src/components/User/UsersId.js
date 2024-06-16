@@ -1,6 +1,7 @@
 // src/components/Profile.js
 
 import React, { useState, useEffect } from 'react';
+import "./UsersId.css"
 
 const UsersId = ({ id }) => {
   const [user, setUser] = useState(null); // Stan przechowujący dane użytkownika
@@ -11,12 +12,12 @@ const UsersId = ({ id }) => {
       try {
         // Możesz tutaj użyć fetch lub axios do pobrania danych z API
         // Symulacja danych, zastąp tym rzeczywistym zapytaniem HTTP
-        const response = await fetch(`Users/${id}`);
+        const response = await fetch(`Users/me`);
         if (!response.ok) {
           throw new Error('Failed to fetch user data');
         }
         const userData = await response.json();
-        console.log(userData);
+        // console.log(userData);
         setUser(userData);
       } catch (error) {
         console.error('Error fetching user data:', error.message);
