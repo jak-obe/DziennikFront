@@ -49,6 +49,9 @@ else {
           <li>
             <button className="nav-button" onClick={handleLogout}>Logout</button>
           </li>
+          <li>
+          <Link to="/planlekcji" className="nav-link">Twoj Plan</Link>
+          </li>
         </ul>
       </div>
     </nav>

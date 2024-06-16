@@ -37,7 +37,8 @@ const Login = () => {
 
   if (loged) {
     return <Navigate replace to="/profile" />;
-  } 
+  }
+
 else {
 
   return (

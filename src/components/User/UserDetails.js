@@ -66,6 +66,9 @@ const UserDetails = ({
           <p className="userDetails__classId">
             <strong>Class ID:</strong> {classId}
           </p>
+          <p className="userDetails__classId">
+            <strong>Rola:</strong> {}
+          </p>
         </div>
         <div className="userDetails__divBottom">
           <button className="userDetails__button" onClick={toggleDetails}>
