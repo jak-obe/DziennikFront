@@ -1,0 +1,126 @@
+/* Global Styles */
+  .class-form {
+    max-width: 600px;
+    width: 100%;
+    margin: 50px auto;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .class-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .class-form div {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .class-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .class-form input[type="text"],
+  .class-form input[type="number"],
+  .class-form select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease;
+  }
+  
+  .class-form input[type="text"]:focus,
+  .class-form input[type="number"]:focus,
+  .class-form select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+    outline: none;
+  }
+  
+  .class-form button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .class-form button[type="submit"]:hover {
+    background-color: #218838;
+  }
+  
+  .class-form button[type="button"] {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .class-form button[type="button"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .class-form ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .class-form ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .class-form ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .class-form ul li button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .class-form ul li button:hover {
+    background-color: #c82333;
+  }
+  
+  /* Success Message */
+  .success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  

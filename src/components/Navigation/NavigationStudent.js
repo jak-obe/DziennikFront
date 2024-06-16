@@ -44,7 +44,7 @@ else {
             <Link to="/profile" className="nav-link">Profile</Link>
           </li>
           <li>
-            <Link to="/profile" className="nav-link">Plan</Link>
+            <Link to="/planlekcji" className="nav-link">Plan</Link>
           </li>
           <li>
             <Link to="/profile" className="nav-link">Oceny</Link>
