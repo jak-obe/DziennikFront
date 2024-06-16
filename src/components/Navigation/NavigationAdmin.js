@@ -47,10 +47,16 @@ else {
             <Link to="/allusers" className="nav-link">AllUsers</Link>
           </li>
           <li>
-            <Link  className="nav-link">AddStudentToClass</Link>
+            <Link  to="/useradd" className="nav-link">Add User</Link>
           </li>
           <li>
-            <Link  className="nav-link">AddClass</Link>
+            <Link  to="/classadd" className="nav-link">AddClass</Link>
+          </li>
+          <li>
+            <Link  to="/subjectadd" className="nav-link">AddSubject</Link>
+          </li>
+          <li>
+            <Link to="/planlekcji" className="nav-link">Plan</Link>
           </li>
           <li>
             <button className="nav-button" onClick={handleLogout}>Logout</button>
