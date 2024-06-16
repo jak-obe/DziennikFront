@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './UserAdd.css'; // Załóżmy, że istnieje plik UserAdd.css dla stylizacji
-import NavigationExtend from '../Navigation/NavigationExtend';
+import NavigationExtend from '../Navigation/NavigationMenager';
 
 const UserAdd = () => {
   const [firstName, setFirstName] = useState('');
