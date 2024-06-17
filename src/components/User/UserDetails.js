@@ -12,6 +12,7 @@ const UserDetails = ({
 }) => {
   const [detailedInfo, setDetailedInfo] = useState(null);
   const [error, setError] = useState(null);
+  const [expanded, setExpanded] = useState(false); // Stan do przechowywania informacji, czy szczegóły są rozwinięte
 
   useEffect(() => {
     const fetchUserDetails = async () => {
@@ -27,22 +28,41 @@ const UserDetails = ({
       }
     };
 
-    fetchUserDetails();
-  }, [id]);
+    if (expanded) {
+      fetchUserDetails();
+    }
+  }, [id, expanded]);
+
+  const toggleExpand = () => {
+    setExpanded(!expanded);
+  };
 
   return (
-    <li>
-      <div className="userDetails__wrapper">
-        <div className="userDetails__divTop">
-          <h1>{roles.$values}</h1>
-          <h2 className="userDetails__title">
-             {firstName} {lastName} <span>({userName})</span>
-          </h2>
-          <p><strong>Id int:</strong> {$id}</p>
-          <p><strong>Id long:</strong> {id}</p>
-          <p><strong>Email:</strong> {email}</p>
+    <div className="userDetails">
+      <button className="userDetails__button" onClick={toggleExpand}>
+        <div className="userDetails__roles">
+          {roles.$values.map((role, index) => (
+            <span key={index} className={`userDetails__role userDetails__role-${role}`}>{role}</span>
+          ))}
         </div>
-      </div>    </li>
+        <span className="userDetails__name">{firstName} {lastName}</span>
+      </button>
+      {expanded && (
+        <div className="userDetails__details">
+          {detailedInfo ? (
+            <>
+              <p><strong>Id int:</strong> {$id}</p>
+              <p><strong>Id long:</strong> {id}</p>
+              <p><strong>Email:</strong> {email}</p>
+              {/* Dodaj inne szczegółowe informacje, jeśli potrzebne */}
+            </>
+          ) : (
+            <p>Loading...</p>
+          )}
+          {error && <p className="error">Error: {error.message}</p>}
+        </div>
+      )}
+    </div>
   );
 };
 

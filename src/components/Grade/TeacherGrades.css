@@ -1,0 +1,53 @@
+.teacher-grades-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  .teacher-grades-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .teacher-grades-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .teacher-grades-container label {
+    margin-bottom: 10px;
+  }
+  
+  .teacher-grades-container select,
+  .teacher-grades-container input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 5px;
+  }
+  
+  .teacher-grades-container button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .teacher-grades-container button:hover {
+    background-color: #218838;
+  }
+  
+  .teacher-grades-container .message {
+    color: green;
+    margin-bottom: 20px;
+  }
+  
+  .teacher-grades-container .error {
+    color: red;
+    margin-bottom: 20px;
+  }

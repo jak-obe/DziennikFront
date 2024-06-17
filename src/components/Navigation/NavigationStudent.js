@@ -47,7 +47,10 @@ else {
             <Link to="/planlekcji" className="nav-link">Plan</Link>
           </li>
           <li>
-            <Link to="/profile" className="nav-link">Oceny</Link>
+            <Link to="/grades" className="nav-link">Oceny</Link>
+          </li>
+          <li>
+            <Link to="/homeworks" className="nav-link">Homeworks</Link>
           </li>
           <li>
             <button className="nav-button" onClick={handleLogout}>Logout</button>

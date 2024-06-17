@@ -1,66 +1,75 @@
-/* UserDetails.css */
-
-.userDetails__wrapper {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 16px;
-  margin: 8px 0;
-  background-color: #f9f9f9;
-  transition: box-shadow 0.3s ease;
-}
-
-.userDetails__wrapper:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.userDetails__divTop {
-  margin-bottom: 16px;
-}
-
-.userDetails__title {
-  font-size: 1.5em;
-  margin-bottom: 8px;
-  color: #333;
-}
-
-.userDetails__email,
-.userDetails__phoneNumber,
-.userDetails__twoFactor,
-.userDetails__lockout,
-.userDetails__lockoutEnabled,
-.userDetails__classId {
-  margin: 4px 0;
-  font-size: 1em;
-  color: #555;
+.userDetails {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .userDetails__button {
-  display: inline-block;
-  padding: 8px 16px;
-  background-color: #007bff;
-  color: #fff;
-  text-align: center;
-  border-radius: 4px;
-  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
   transition: background-color 0.3s ease;
+  border-radius: 5px;
+  width: 500px; /* Szerokość przycisku */
+  margin-left: 100px; /* Odległość od lewej krawędzi */
 }
 
 .userDetails__button:hover {
-  background-color: #0056b3;
+  background-color: #f0f0f0;
 }
 
-.userDetails__extraInfo {
-  margin-top: 16px;
-  padding: 16px;
-  background-color: #e9e9e9;
-  border-radius: 8px;
+.userDetails__roles {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
 }
 
-.userDetails__extraInfo p {
-  margin-bottom: 8px;
+.userDetails__role {
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 14px;
 }
 
-.userDetails__extraInfo pre {
-  white-space: pre-wrap;
-  word-wrap: break-word;
+.userDetails__role-Administrator {
+  background-color: #becaca; /* Kolor dla roli 0 */
+}
+
+.userDetails__role-Student {
+  background-color: #7ec580; /* Kolor dla roli 1 */
+}
+
+.userDetails__role-Teacher {
+  background-color: #FF9800; /* Kolor dla roli 2 */
+}
+
+.userDetails__role-User {
+  background-color: #c580d1; /* Kolor dla roli 3 */
+}
+
+.userDetails__name {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.userDetails__details {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  width: 500px; /* Szerokość rozwijanego diva */
+  margin: 10px 0; /* Odległość od góry i dołu */
+  text-align: left;
+  margin-left: 100px;
+}
+
+.userDetails__details p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.userDetails__details .error {
+  color: red;
+  font-size: 14px;
 }

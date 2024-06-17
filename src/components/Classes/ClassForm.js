@@ -4,7 +4,7 @@ import './ClassForm.css'; // Import pliku CSS
 const ClassForm = () => {
   const [classId, setClassId] = useState(0);
   const [className, setClassName] = useState('');
-  const [year, setYear] = useState(0);
+  const [year, setYear] = useState(new Date().getFullYear()); // Początkowa wartość to bieżący rok
   const [studentIds, setStudentIds] = useState([]);
   const [students, setStudents] = useState([]);
   const [selectedStudentId, setSelectedStudentId] = useState('');
@@ -38,7 +38,7 @@ const ClassForm = () => {
     };
 
     try {
-      const response = await fetch('/api/Classes', {
+      const response = await fetch('/Classes', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -68,23 +68,23 @@ const ClassForm = () => {
     setStudentIds(studentIds.filter(studentId => studentId !== id));
   };
 
+  const handleClassNameChange = (e) => {
+    setClassName(e.target.value);
+    // Aktualizacja roku na bieżący rok, jeśli pole jest puste
+    if (!year) {
+      setYear(new Date().getFullYear());
+    }
+  };
+
   return (
     <form className="class-form" onSubmit={handleSubmit}>
-      <div>
-        <label>Class ID:</label>
-        <input
-          type="number"
-          value={classId}
-          onChange={(e) => setClassId(Number(e.target.value))}
-          required
-        />
-      </div>
+      
       <div>
         <label>Class Name:</label>
         <input
           type="text"
           value={className}
-          onChange={(e) => setClassName(e.target.value)}
+          onChange={handleClassNameChange}
           required
         />
       </div>

@@ -1,0 +1,73 @@
+.user-list-wrapper {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .role-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .role-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  .role-button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .role-button.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .role-button.Teacher {
+    background-color: #2196F3;
+  }
+  
+  .role-button.Student {
+    background-color: #FF9800;
+  }
+  
+  .role-button.Administrator {
+    background-color: #9C27B0;
+  }
+  
+  .role-button.User {
+    background-color: #607D8B;
+  }
+  
+  .role-users {
+    margin-top: 20px;
+  }
+  
+  .user-details {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .user-details h1 {
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  
+  .user-details h2 {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  
+  .user-details p {
+    margin: 3px 0;
+    font-size: 14px;
+  }
+  
