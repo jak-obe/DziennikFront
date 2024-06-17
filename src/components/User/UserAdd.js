@@ -12,8 +12,8 @@ const UserAdd = () => {
 
   const handleAddUser = async (e) => {
     e.preventDefault();
-
-    const newUser = { firstName, lastName, email, password, role };
+    const id = "0";
+    const newUser = { id , firstName, lastName, email, password, role };
 
     const response = await fetch('Users/add', {
       method: 'POST',

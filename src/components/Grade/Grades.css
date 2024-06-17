@@ -1,0 +1,28 @@
+.grades-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  .grades-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .grades-container table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .grades-container th,
+  .grades-container td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .grades-container th {
+    background-color: #f2f2f2;
+  }

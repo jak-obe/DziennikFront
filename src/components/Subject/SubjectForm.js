@@ -7,6 +7,7 @@ const SubjectForm = () => {
   const [teachers, setTeachers] = useState([]);
   const [selectedTeacherId, setSelectedTeacherId] = useState('');
   const [classId, setClassId] = useState('');
+  const [classes, setClasses] = useState([]); // Inicjowanie jako pusta tablica
   const [successMessage, setSuccessMessage] = useState('');
   const [lessons, setLessons] = useState([]);
 
@@ -26,6 +27,30 @@ const SubjectForm = () => {
     };
 
     fetchTeachers();
+  }, []);
+
+  // Fetchowanie listy klas
+  useEffect(() => {
+    const fetchClasses = async () => {
+      try {
+        const response = await fetch('/Classes');
+        if (!response.ok) {
+          throw new Error('Failed to fetch classes');
+        }
+        const classesData = await response.json();
+        // Przetworzenie danych klas, aby zawierały tylko classId i className
+        const formattedClasses = classesData.$values.map(classItem => ({
+          classId: classItem.classId,
+          className: classItem.className
+        }));
+        setClasses(formattedClasses); // Ustawienie sformatowanych danych klas
+        console.log('Formatted Classes:', formattedClasses);
+      } catch (error) {
+        console.error('Error fetching classes:', error.message);
+      }
+    };
+
+    fetchClasses();
   }, []);
 
   const handleSubmit = async (e) => {
@@ -188,13 +213,18 @@ const SubjectForm = () => {
         <div className="assign-class">
           <h3>Assign Class to Subject</h3>
           <div>
-            <label>Class ID:</label>
-            <input
-              type="text"
+            <label>Select Class:</label>
+            <select
               value={classId}
               onChange={(e) => setClassId(e.target.value)}
-              required
-            />
+            >
+              <option value="">--Select Class--</option>
+              {classes.map((classItem) => (
+                <option key={classItem.classId} value={classItem.classId}>
+                  {classItem.className}
+                </option>
+              ))}
+            </select>
           </div>
           <button type="button" onClick={handleAssignClass}>
             Assign Class

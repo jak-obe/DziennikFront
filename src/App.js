@@ -8,6 +8,9 @@ import AllUsersViev from './components/widoki/AllUsersViev';
 import PlanLekcjiViev from './components/widoki/PlanLekcjiViev';
 import ClassAddViev from './components/widoki/ClassAddViev';
 import SubjectViev from './components/widoki/SubjectViev';
+import HomeworkViev from './components/widoki/HomeworkViev';
+import GradesViev from './components/widoki/GradesViev';
+import TeacherGradesViev from './components/widoki/TeacherGradesViev';
 
 const App = () => {
   return (
@@ -20,7 +23,10 @@ const App = () => {
           <Route path="/profile" element={<ProfileViev/>} />
           <Route path="/allusers" element={<AllUsersViev/>} />
           <Route path="/classadd" element={<ClassAddViev/>} />
+          <Route path="/grades" element={<GradesViev/>} />
           <Route path="/subjectadd" element={<SubjectViev/>} />
+          <Route path="/homeworks" element={<HomeworkViev/>} />
+          <Route path="/teachergrades" element={<TeacherGradesViev/>} />
           <Route path="/planlekcji" element={<PlanLekcjiViev/>} />
         </Routes>
       </div>

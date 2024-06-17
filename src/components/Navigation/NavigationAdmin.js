@@ -56,7 +56,7 @@ else {
             <Link  to="/subjectadd" className="nav-link">AddSubject</Link>
           </li>
           <li>
-            <Link to="/planlekcji" className="nav-link">Plan</Link>
+            <Link  to="/teachergrades" className="nav-link">TeacherGrades</Link>
           </li>
           <li>
             <button className="nav-button" onClick={handleLogout}>Logout</button>
